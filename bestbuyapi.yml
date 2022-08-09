@@ -3,7 +3,7 @@
 #get your api key from: https://developer.bestbuy.com/
   - platform: rest
     name: ps5 best buy
-    scan_interval: 60
+    scan_interval: 3600
     resource: https://api.bestbuy.com/v1/products/6426149.json?show=sku,name,salePrice,inStoreAvailability,onlineAvailability,orderable&apiKey=z1sBh6i2ukBVbVYzkyqJMfWS
     json_attributes:
       - salePrice
