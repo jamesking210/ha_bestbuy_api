@@ -1,5 +1,5 @@
 #PS5 BEST BUY
-#add this to your configoration.yaml file
+#add this to your configuration.yaml file
 #get your api key from: https://developer.bestbuy.com/
   - platform: rest
     name: ps5 best buy
