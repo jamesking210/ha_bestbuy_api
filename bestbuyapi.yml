@@ -4,13 +4,13 @@
   - platform: rest
     name: ps5 best buy
     scan_interval: 60
-    resource: https://api.bestbuy.com/v1/products/6426149.json?show=sku,name,salePrice,inStoreAvailability,onlineAvailability&apiKey=INSERT_API_KEY_HERE
+    resource: https://api.bestbuy.com/v1/products/6426149.json?show=sku,name,salePrice,inStoreAvailability,onlineAvailability,orderable&apiKey=z1sBh6i2ukBVbVYzkyqJMfWS
     json_attributes:
       - salePrice
       - inStoreAvailability
       - onlineAvailability
+      - orderable
     value_template: "{{ value_json.ps5 }}"
-    
   - platform: template
     sensors:
       ps5saleprice:
@@ -23,3 +23,6 @@
       ps5online:
         friendly_name: "ps5 online"
         value_template: "{{ state_attr('sensor.ps5_best_buy', 'onlineAvailability') }}"
+      ps5orderable:
+        friendly_name: "ps5 online"
+        value_template: "{{ state_attr('sensor.ps5_best_buy', 'orderable') }}"
